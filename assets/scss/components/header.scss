@@ -1,0 +1,38 @@
+@use '../util' as *;
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: rem(70);
+    padding-bottom: rem(50);
+
+}
+
+.nav {
+
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+
+        li {
+            
+            &:not(:last-child){
+                padding-right: rem(35);
+            }
+
+            &:hover {
+                a {
+                    color: var(--soft-red);
+                }
+            }
+
+            a {
+                color: var(--dark-grayish-blue);
+            }
+        }
+    }
+}
