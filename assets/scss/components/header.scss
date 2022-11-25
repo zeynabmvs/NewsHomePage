@@ -77,7 +77,7 @@
             z-index: 1000;
 
             >span:first-child {
-                transform: translateY(19px) translateX(0) rotate(-45deg);            
+                transform: translateY(19px) translateX(0) rotate(-45deg);
             }
 
             >span:nth-child(2) {
@@ -99,12 +99,15 @@
         justify-content: space-between;
 
         li {
+            transition: all 100ms ease-in-out;
 
             &:not(:last-child) {
                 padding-right: rem(35);
             }
 
             &:hover {
+                transform: scale(1.1);
+
                 a {
                     color: var(--soft-red);
                 }
@@ -120,23 +123,52 @@
 
 // because we can't animate on display: none to display: block we use this trick to get the job don
 @keyframes slide-in {
-    from { visibility: hidden; opacity:0; width: 0;}
-    1% { visibility: visible; opacity: 0; width: 0;}
-    to { visibility: visible; opacity: 1; width: 65%;}
-}
-@keyframes slide-out {
-    from { visibility: visible; opacity: 1; width: 65%;}
-    99% { visibility: visible; opacity: 0; width: 0;}
-    to { visibility: hidden; opacity:0; width: 0;}
+    from {
+        visibility: hidden;
+        opacity: 0;
+        width: 0;
+    }
+
+    1% {
+        visibility: visible;
+        opacity: 0;
+        width: 0;
+    }
+
+    to {
+        visibility: visible;
+        opacity: 1;
+        width: 65%;
+    }
 }
 
-    
+@keyframes slide-out {
+    from {
+        visibility: visible;
+        opacity: 1;
+        width: 65%;
+    }
+
+    99% {
+        visibility: visible;
+        opacity: 0;
+        width: 0;
+    }
+
+    to {
+        visibility: hidden;
+        opacity: 0;
+        width: 0;
+    }
+}
+
+
 .slide-in {
-    animation: slide-in 300ms ease-in-out forwards; 
+    animation: slide-in 300ms ease-in-out forwards;
 }
 
 .slide-out {
-    animation: slide-out 300ms ease-in-out backwards; 
+    animation: slide-out 300ms ease-in-out backwards;
 }
 
 .side-menu {
@@ -152,7 +184,7 @@
     z-index: 1000;
     height: 100vh;
 
-    
+
     .mobile_nav {
 
         ul {
