@@ -1,3 +1,5 @@
+@use '../util' as *;
+
 html {
     font-size: 100%;
     box-sizing: border-box;
@@ -12,6 +14,10 @@ html {
 body {
     margin: 0;
     padding: 0;
+            
+    &.noscroll {
+        overflow: hidden;
+    }
 }
 
 img {
@@ -81,17 +87,17 @@ ul {
     }
 }
 
-// .hide-for-mobile {
-//     @include breakpoint-down(small) {
-//         display: none;
-//     }
-// }
+.hide-for-mobile {
+    @include breakpoint-down(small) {
+        display: none;
+    }
+}
 
-// .hide-for-desktop {
-//     @include breakpoint(medium) {
-//         display: none;
-//     }
-// }
+.hide-for-desktop {
+    @include breakpoint(medium) {
+        display: none;
+    }
+}
 
 .visually-hidden {
     position: absolute;
