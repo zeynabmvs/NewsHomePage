@@ -4,12 +4,8 @@
     max-width: 90%;
     margin: 0 auto;
     
-    // @include breakpoint(medium) {
-    //     max-width: 45em;
-    // }
-
-    @include breakpoint(large) {
-        max-width: 69.5rem;
+    @include breakpoint(xlarge) {
+        max-width: 69.5rem;  // 1122px
     }
     
 }
