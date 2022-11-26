@@ -2,19 +2,33 @@
 
 .main {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr;
-    gap: rem(30);
-    margin-bottom: rem(72);
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+
+    @include breakpoint(medium) {
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr;
+        gap: rem(30);
+        margin-bottom: rem(72);
+    }
 
     .feature {
         display: grid;
         grid-template-areas:
-            "f_image f_image"
-            "f_title f_content";
-        grid-template-rows: 3fr 2fr;
-        grid-template-columns: 1fr 1fr;
+            "f_image"
+            "f_title"
+            "f_content";
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3, auto);
 
+        @include breakpoint(medium) {
+            grid-template-areas:
+                "f_image f_image"
+                "f_title f_content";
+            grid-template-rows: 3fr 2fr;
+            grid-template-columns: 1fr 1fr;
+        }
+        
         &__image {
             grid-area: f_image;
         }
@@ -92,10 +106,17 @@
 
 .articles {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    gap: rem(45);
-    margin-bottom: rem(129);
+    grid-template-columns: auto;
+    grid-template-rows: repeat(1fr);
+    // gap: rem(45);
+    // margin-bottom: rem(129);
+
+    @include breakpoint(medium) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        gap: rem(45);
+        margin-bottom: rem(129);
+    }
 
     .article {
         display: grid;
