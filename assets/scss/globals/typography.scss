@@ -9,10 +9,35 @@ $fonts_dir : '/assets/fonts/static/';
         url($fonts_dir + "Inter-Regular.ttf") format("ttf");
 }
 
+:root {
+    --fs-base: 1rem;
+    --fs-scale-ratio: .9; // change this in media queries
+
+    --fs-xxlg: calc(var(--fs-base) * var(--fs-scale-ratio) * 3.375); //54px
+    --fs-xlg: calc(var(--fs-base) * var(--fs-scale-ratio) * 2.25); //36px
+    --fs-lg: calc(var(--fs-base) * var(--fs-scale-ratio) * 2.25); //24px
+    --fs-md: calc(var(--fs-base) * var(--fs-scale-ratio) * 1.1875); //19px
+    --fs-sm: calc(var(--fs-base) * var(--fs-scale-ratio) * 1); //16px
+    --fs-xs: calc(var(--fs-base) * var(--fs-scale-ratio) * 0.9375); //15px
+}
+
+@include breakpoint(small) {
+    :root {
+        --fs-scale-ratio: 1;
+    }
+}
+
+@include breakpoint(xxlarge) {
+    :root {
+        --fs-scale-ratio: 1.1;
+    }
+}
+
+
 body {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    font-size: rem(15);
+    font-size: var(--fs-xs);
     color: var(--grayish-blue);
 }   
 
@@ -21,18 +46,20 @@ p {
 }
 
 h1 {
-    font-size: rem(54);
+    font-size: var(--fs-xxlg);
     font-weight: 900;
+    line-height: 1.3;
 }
 
 h2 {
-    font-size: rem(36);
+    font-size: var(--fs-xlg);
     font-weight: 700;
 }
 
 h3 {
-    font-size: rem(19);
+    font-size: var(--fs-md);
 }
+
 h4 {
-    font-size: rem(16);
+    font-size: var(--fs-sm);
 }
