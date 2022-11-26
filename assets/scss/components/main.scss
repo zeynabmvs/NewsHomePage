@@ -55,5 +55,37 @@
 
     }
 
+    .sidebar {
+        background-color: var(--very-dark-blue);
+        padding: rem(36) rem(25) 0 rem(25);
+
+        &__title {
+            color: var(--soft-orange);
+            margin-bottom: rem(36);
+        }
+
+        article {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            // gap: rem(25);
+
+            &:not(:last-child) {
+                border-bottom: 1px solid var(--grayish-blue);
+                margin-bottom: rem(32);
+            }
+
+            h3 {
+                color: var(--off-white);
+                margin-bottom: rem(14);
+            }
+
+            p {
+                color: var(--grayish-blue);
+                margin-bottom: rem(36);
+            }
+        }
+    }
+    
 
 }
