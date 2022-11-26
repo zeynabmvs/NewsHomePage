@@ -14,7 +14,8 @@ html {
 body {
     margin: 0;
     padding: 0;
-            
+    background-color: var(--off-white);
+    
     &.noscroll {
         overflow: hidden;
     }
@@ -31,6 +32,7 @@ picture {
 
 p {
     margin: 0;
+    padding: 0;
 }
 
 a,
@@ -46,6 +48,7 @@ h4,
 h5,
 h6 {
     margin: 0;
+    padding: 0;
 }
 
 input:focus {

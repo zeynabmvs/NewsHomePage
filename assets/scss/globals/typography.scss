@@ -1,3 +1,5 @@
+@use '../util' as *;
+
 $fonts_dir : '/assets/fonts/static/';
 
 @font-face {
@@ -10,4 +12,27 @@ $fonts_dir : '/assets/fonts/static/';
 body {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
+    font-size: rem(15);
+    color: var(--grayish-blue);
 }   
+
+p {
+    line-height: 1.8;
+}
+
+h1 {
+    font-size: rem(54);
+    font-weight: 900;
+}
+
+h2 {
+    font-size: rem(36);
+    font-weight: 700;
+}
+
+h3 {
+    font-size: rem(19);
+}
+h4 {
+    font-size: rem(16);
+}
