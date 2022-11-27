@@ -20,10 +20,19 @@
             "f_content";
         grid-template-columns: auto;
         grid-template-rows: repeat(3, auto);
-        // gap: rem(28);
         margin-bottom: rem(44);
 
         @include breakpoint(medium) {
+            grid-template-areas:
+                "f_image f_image"
+                "f_title"
+                "f_content";
+            grid-template-rows: auto auto auto;
+            grid-template-columns: auto;
+            margin-bottom: 0;
+        }
+
+        @include breakpoint(large) {
             grid-template-areas:
                 "f_image f_image"
                 "f_title f_content";
@@ -58,10 +67,18 @@
             justify-content: space-between;
             margin-bottom: rem(28);
 
+            @include breakpoint(medium) {
+                margin-bottom: 0;
+            }
+            
             &__excerpt {
                 padding-right: rem(30);
                 color: var(--dark-grayish-blue);
                 margin-bottom: rem(38);
+
+                @include breakpoint(medium) {
+                    margin-bottom: 0;
+                }
             }
 
             &__btn {
@@ -91,7 +108,7 @@
             padding: rem(27) rem(18) 0 rem(18);
             margin-bottom: rem(0);
         }
-        
+
         @include breakpoint(large) {
             padding: rem(36) rem(25) 0 rem(25);
             margin-bottom: rem(0);
@@ -128,7 +145,7 @@
             h3 {
                 color: var(--off-white);
                 margin-bottom: rem(14);
-                
+
                 @include breakpoint(medium) {
                     margin-bottom: rem(12);
                 }
@@ -137,16 +154,14 @@
             p {
                 color: var(--grayish-blue);
                 margin-bottom: rem(36);
-                
+
                 @include breakpoint(medium) {
                     margin-bottom: rem(30);
-                }                           
+                }
 
             }
         }
     }
-
-
 }
 
 .articles {
@@ -181,7 +196,7 @@
                 gap: rem(20);
                 justify-content: center;
             }
-            
+
             @include breakpoint(medium) {
                 gap: rem(24);
                 justify-content: space-between;
