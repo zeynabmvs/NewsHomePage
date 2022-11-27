@@ -88,6 +88,11 @@
         margin-bottom: rem(64);
 
         @include breakpoint(medium) {
+            padding: rem(27) rem(18) 0 rem(18);
+            margin-bottom: rem(0);
+        }
+        
+        @include breakpoint(large) {
             padding: rem(36) rem(25) 0 rem(25);
             margin-bottom: rem(0);
         }
@@ -97,11 +102,15 @@
             margin-bottom: rem(42);
 
             @include breakpoint(medium) {
+                margin-bottom: rem(23);
+            }
+
+            @include breakpoint(large) {
                 margin-bottom: rem(36);
             }
         }
 
-        article {
+        &__article {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -110,16 +119,29 @@
             &:not(:last-child) {
                 border-bottom: 1px solid var(--grayish-blue);
                 margin-bottom: rem(32);
+
+                @include breakpoint(medium) {
+                    margin-bottom: rem(27);
+                }
             }
 
             h3 {
                 color: var(--off-white);
                 margin-bottom: rem(14);
+                
+                @include breakpoint(medium) {
+                    margin-bottom: rem(12);
+                }
             }
 
             p {
                 color: var(--grayish-blue);
                 margin-bottom: rem(36);
+                
+                @include breakpoint(medium) {
+                    margin-bottom: rem(30);
+                }                           
+
             }
         }
     }

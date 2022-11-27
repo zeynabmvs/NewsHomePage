@@ -98,13 +98,13 @@ ul {
 }
 
 .hide-for-mobile {
-    @include breakpoint-down(small) {
+    @include breakpoint-down(medium) {
         display: none;
     }
 }
 
 .hide-for-desktop {
-    @include breakpoint(medium) {
+    @include breakpoint(large) {
         display: none;
     }
 }
