@@ -70,7 +70,7 @@
             @include breakpoint(medium) {
                 margin-bottom: 0;
             }
-            
+
             &__excerpt {
                 padding-right: rem(30);
                 color: var(--dark-grayish-blue);
@@ -184,6 +184,19 @@
         grid-template-rows: 1fr;
         gap: rem(25);
 
+        @include breakpoint(medium) {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+        }
+
+        @include breakpoint(large) {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 1fr;
+            gap: rem(25);
+        }
+
         &__content {
             display: flex;
             flex-direction: column;
@@ -198,11 +211,19 @@
             }
 
             @include breakpoint(medium) {
-                gap: rem(24);
+                gap: rem(17);
                 justify-content: space-between;
+                padding-right: rem(10);
+            }
+
+            @include breakpoint(large) {
+                gap: rem(21);
+                justify-content: flex-start;
+                padding-right: 0;
             }
 
             span {
+                color: var(--grayish-blue);
                 font-size: var(--fs-lg);
                 font-weight: 700;
             }
