@@ -20,6 +20,8 @@
             "f_content";
         grid-template-columns: auto;
         grid-template-rows: repeat(3, auto);
+        // gap: rem(28);
+        margin-bottom: rem(44);
 
         @include breakpoint(medium) {
             grid-template-areas:
@@ -27,28 +29,39 @@
                 "f_title f_content";
             grid-template-rows: 3fr 2fr;
             grid-template-columns: 1fr 1fr;
+            margin-bottom: 0;
         }
-        
+
         &__image {
             grid-area: f_image;
+            margin-bottom: rem(28);
+
+            @include breakpoint(medium) {
+                margin-bottom: 0;
+            }
         }
 
         &__title {
             grid-area: f_title;
             color: var(--very-dark-blue);
+            margin-bottom: rem(28);
+
+            @include breakpoint(medium) {
+                margin-bottom: 0;
+            }
         }
 
         &__content {
             grid-area: f_content;
             display: flex;
             flex-direction: column;
-            // gap: rem(38);
             justify-content: space-between;
+            margin-bottom: rem(28);
 
             &__excerpt {
                 padding-right: rem(30);
                 color: var(--dark-grayish-blue);
-                // margin-bottom: rem(38);
+                margin-bottom: rem(38);
             }
 
             &__btn {
@@ -71,11 +84,21 @@
 
     .sidebar {
         background-color: var(--very-dark-blue);
-        padding: rem(36) rem(25) 0 rem(25);
+        padding: rem(28) rem(22) 0 rem(22);
+        margin-bottom: rem(64);
+
+        @include breakpoint(medium) {
+            padding: rem(36) rem(25) 0 rem(25);
+            margin-bottom: rem(0);
+        }
 
         &__title {
             color: var(--soft-orange);
-            margin-bottom: rem(36);
+            margin-bottom: rem(42);
+
+            @include breakpoint(medium) {
+                margin-bottom: rem(36);
+            }
         }
 
         article {
@@ -108,8 +131,8 @@
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: repeat(1fr);
-    // gap: rem(45);
-    // margin-bottom: rem(129);
+    gap: rem(34);
+    margin-bottom: rem(81);
 
     @include breakpoint(medium) {
         grid-template-columns: repeat(3, 1fr);
@@ -122,12 +145,25 @@
         display: grid;
         grid-template-columns: 1fr 2fr;
         grid-template-rows: 1fr;
-        gap: rem(24);
+        gap: rem(25);
 
         &__content {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            // justify-content: space-between;
+            gap: rem(9);
+            justify-content: center;
+
+
+            @include breakpoint(xsmall) {
+                gap: rem(20);
+                justify-content: center;
+            }
+            
+            @include breakpoint(medium) {
+                gap: rem(24);
+                justify-content: space-between;
+            }
 
             span {
                 font-size: var(--fs-lg);
