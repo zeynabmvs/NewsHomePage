@@ -36,7 +36,16 @@
             grid-template-areas:
                 "f_image f_image"
                 "f_title f_content";
-            grid-template-rows: 3fr 2fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 0;
+        }
+
+        @include breakpoint(xlarge) {
+            grid-template-areas:
+                "f_image f_image"
+                "f_title f_content";
+            grid-template-rows: 2fr 1.5fr;
             grid-template-columns: 1fr 1fr;
             margin-bottom: 0;
         }
@@ -54,7 +63,9 @@
             grid-area: f_title;
             color: var(--very-dark-blue);
             margin-bottom: rem(28);
-
+            padding-right: rem(10);
+            margin: auto 0;
+            
             @include breakpoint(medium) {
                 margin-bottom: 0;
             }
@@ -70,6 +81,10 @@
             @include breakpoint(medium) {
                 margin-bottom: 0;
             }
+            
+            @include breakpoint(large) {
+                justify-content: center;
+            }
 
             &__excerpt {
                 padding-right: rem(30);
@@ -78,6 +93,10 @@
 
                 @include breakpoint(medium) {
                     margin-bottom: 0;
+                }
+                
+                @include breakpoint(large) {
+                    margin-bottom: rem(38);
                 }
             }
 
@@ -89,7 +108,10 @@
                 width: rem(180);
                 height: rem(50);
                 transition: all 200ms ease-in-out;
-
+                letter-spacing: 4px;
+                font-size: rem(11);
+                font-weight: 700;
+                
                 &:hover {
                     background-color: var(--very-dark-blue);
 
@@ -145,6 +167,11 @@
             h3 {
                 color: var(--off-white);
                 margin-bottom: rem(14);
+                transition: all 150ms ease-in-out;
+                
+                &:hover {
+                    color: var(--soft-orange);
+                }
 
                 @include breakpoint(medium) {
                     margin-bottom: rem(12);
