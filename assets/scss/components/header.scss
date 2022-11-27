@@ -102,7 +102,11 @@
             transition: all 200ms ease-in-out;
 
             &:not(:last-child) {
-                padding-right: rem(35);
+                padding-right: rem(25);
+
+                @include breakpoint(large) {
+                    padding-right: rem(35);
+                }
             }
 
             &:hover {
