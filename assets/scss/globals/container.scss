@@ -4,10 +4,8 @@
     max-width: 90%;
     margin: 0 auto;
     
+    // in big screens don't let the container to be more than 1440px wide 
     @include breakpoint(1460px) {
         max-width: 90rem;  // 1440px
     }
-    
-
-    
 }

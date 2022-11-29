@@ -1,5 +1,7 @@
 @use '../util' as *;
 
+// tablet's responsive design is something between desktop and mobile
+
 .main {
     display: grid;
     grid-template-columns: 1fr;
@@ -147,6 +149,7 @@
                     transform: translateX(-90px) skewX(-15deg);
                 }
 
+                // on hover: 1) change background color 2) show and transform before and after's contents
                 &:hover {
                     background: var(--very-dark-blue);
                     cursor: pointer;
@@ -204,7 +207,6 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            // gap: rem(25);
 
             &:not(:last-child) {
                 border-bottom: 1px solid var(--grayish-blue);
@@ -278,7 +280,6 @@
         &__content {
             display: flex;
             flex-direction: column;
-            // justify-content: space-between;
             gap: rem(9);
             justify-content: center;
 

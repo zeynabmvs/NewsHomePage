@@ -11,7 +11,7 @@ $fonts_dir : '/assets/fonts/static/';
 
 :root {
     --fs-base: 1rem;
-    --fs-scale-ratio: .8; // change this in media queries
+    --fs-scale-ratio: .8; // change this in media queries, based on the viewport size
 
     --fs-xxlg: calc(var(--fs-base) * var(--fs-scale-ratio) * 3.375); //54px
     --fs-xlg: calc(var(--fs-base) * var(--fs-scale-ratio) * 2.25); //36px
@@ -69,6 +69,7 @@ h2 {
     font-weight: 700;
 }
 
+// h3, h4, body have static font sizes
 h3 {
     font-size: rem(16);
 }

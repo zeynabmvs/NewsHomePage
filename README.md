@@ -1,5 +1,5 @@
 # News homepage
-This is a home page for a news agency, You can see the live site demo at the address below
+This is a home page for a news agency, You can see the live site demo at the address below.
 My focus in this project was it to be fully responsive and used many media query to achieve that. for the responsiveness of font sizes I used calculation based on size of the viewport width.   
 
 - Live Site URL: (https://zeynabmvs.github.io/news-homepage/)
