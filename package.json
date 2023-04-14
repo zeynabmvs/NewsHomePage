@@ -1,22 +1,22 @@
 {
-  "name": "todoappfem",
+  "name": "newshomepage",
   "version": "1.0.0",
-  "description": "todoappfem",
+  "description": "newshomepage",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zeynabmvs/todoappfem.git"
+    "url": "git+https://github.com/zeynabmvs/newshomepage.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zeynabmvs/todoappfem/issues"
+    "url": "https://github.com/zeynabmvs/newshomepage/issues"
   },
-  "homepage": "https://github.com/zeynabmvs/todoappfem#readme",
+  "homepage": "https://github.com/zeynabmvs/newshomepage#readme",
   "dependencies": {
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",
